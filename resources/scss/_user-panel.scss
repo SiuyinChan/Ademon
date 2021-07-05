@@ -1,0 +1,130 @@
+.dashboard{
+    display: flex;
+    justify-content:space-around;
+
+    .menu{
+        width: 25%;
+        background: #FCFCFC;
+        padding: 20px;
+
+        li{
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: $grey;
+            display: flex;
+            align-items: center;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            img{
+               width: 28px;
+               margin-right: 15px;
+            }
+
+            
+        }
+    }
+
+    .userInfo{
+        width: 45%;
+        margin-left: 80px;
+        margin-right: auto;
+    }
+
+    form{        
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+
+        label{
+            grid-column: 1/2;
+            padding: 8px;
+        }
+    
+        input, select, textarea{
+            grid-column: 2/3;            
+            padding: 5px;
+            font-size: 1.05rem;        
+            outline: none;
+
+            &:focus{
+                border: 2px solid $blue;
+            }
+        }
+
+        button{
+            grid-column: 2/3;
+            padding: 5px;
+            width: 100%;
+            margin: 10px 0 20px 0;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            background: $text;
+            cursor: pointer;    
+        }         
+
+        .delete{
+            background: white;
+            border: 0;
+            color: red;
+            text-decoration: underline;
+            margin: 30px 0;
+        }
+    }
+
+    .userAds{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 200px;
+        grid-template-rows: auto;
+        margin:0 0 80px 40px;
+
+        h4{
+            padding: 20px;
+        }
+
+        p{
+            font-weight: 600;
+            padding: 20px;
+            margin: 20px 0;
+            background: #FCFCFC;
+        }
+
+        a{
+            width: 100%;
+            margin: auto;
+            padding: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+
+            &::before{
+                transition: all 0.65s cubic-bezier(0, -0.55, 0.265, 1.55);
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: black;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            & .btn-text{
+                color: white;
+                mix-blend-mode: difference;
+            }
+            &:hover{
+                &::before{
+                    background: black;
+                    width: 15%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.searchbar{
+    display: flex;
+    width: 600px;
+    margin: auto;
+    border-bottom: 3px solid $text;
+    padding: 10px 5px;
+
+    select{
+        border: 0;
+        outline: none;
+    }
+
+    button{
+        border: 0;
+        outline: none;
+        background: white;
+        margin: 0 10px 0 20px;
+    }
+
+    input{
+        width: 100%;
+        border: 0;
+        outline: none;
+        font-size: 1.2rem;
+            
+        &::placeholder{
+            opacity: 0.5;
+            font-style: italic;
+        }        
+    }    
+}

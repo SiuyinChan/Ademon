@@ -1,0 +1,47 @@
+.post-ad-block{
+    width: 550px;
+    margin: 80px auto;
+    
+    h1{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 40px 0;      
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: auto;  
+        gap: 20px; 
+
+        label{
+            grid-column: 1/2;
+            padding: 8px;
+        }
+    
+        input, select, textarea{
+            grid-column: 2/3;            
+            padding: 5px;
+            font-size: 1.05rem;        
+            outline: none;
+
+            &:focus{
+                border: 2px solid $blue;
+            }
+        }
+
+        button{
+            grid-column: 2/3;
+            padding: 5px;
+            width: 100%;
+            margin: 10px 0 20px 0;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            background: $text;
+            cursor: pointer;    
+        }        
+    }
+}

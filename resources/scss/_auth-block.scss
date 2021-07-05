@@ -1,0 +1,62 @@
+.auth-block{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 50px auto;
+
+    .title{
+        font-size: 2rem;
+        font-weight: 800;
+        text-align: center;
+        margin: 20px 0 40px 0;
+    }
+
+    label{
+        padding: 10px 0;
+        font-size: 0.8rem;
+        color: $grey;
+    }
+
+    input{
+        width: 287px;
+        margin: 6px 0 16px 0;
+        padding: 5px;
+        font-size: 1.05rem;        
+        outline: none;
+    }
+    
+    input:focus{
+        border: 2px solid $blue;
+    }
+
+    input[type=checkbox]{
+        width: 20px;
+    }
+
+    button{        
+        padding: 5px;
+        width: 100%;
+        margin: 10px 0 20px 0;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+        background: $text;
+        cursor: pointer;
+    }
+
+    a{
+        font-size: 0.9rem;
+        margin-left: 80px;
+        text-decoration: underline;
+
+        &:hover{
+            color: $blue;
+        }
+    }
+
+    .alert{
+        font-size: 0.8rem;
+        color: red;
+    }
+}

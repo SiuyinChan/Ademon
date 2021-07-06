@@ -9,7 +9,7 @@
     ul{
         display: flex;
         justify-content: space-around;
-        flex-wrap: wrap;        
+        flex-wrap: wrap;
     }
 }
 
@@ -23,7 +23,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
     img{
-        width: 200px;
+        width: 250px;
         height: 100%;
         object-fit: cover;
     }
@@ -37,16 +37,16 @@
         font-size: 1.1rem;
         font-weight: 700;
     }
-    
+
     .price{
         float: right;
         font-size: 1.1rem;
     }
-    
+
     .date{
         font-size: 0.7rem;
-        color: $grey; 
-        margin-top: 5px;       
+        color: $grey;
+        margin-top: 5px;
     }
 
     .description{
@@ -54,18 +54,18 @@
         color: $grey;
         display: -webkit-box;
         -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;  
+        -webkit-box-orient: vertical;
         overflow: hidden;
-        width: 100%;   
+        width: 100%;
         text-overflow: ellipsis;
-        margin: 10px 0 25px 0; 
-        min-height: 82px;       
+        margin: 10px 0 25px 0;
+        min-height: 82px;
     }
 
     .icon{
         width: 24px;
         height: auto;
-        margin: 5px;       
+        margin: 5px;
     }
 
     .view-details{

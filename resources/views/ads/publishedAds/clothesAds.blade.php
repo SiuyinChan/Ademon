@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@include('components.searchbar')  
+@include('components.searchbar')
     <div class="container">
         <div class="side-bar">
             <div class="card-header">
@@ -23,8 +23,9 @@
             </div>
         </div>
 
+
         <div class="products-list">
-            <h3>HOOBIES</h3>
+            <h3>CLOTHES</h3>
             <ul>
                  @if(isset($ads))
                      @if(count($ads)>0)
@@ -36,13 +37,13 @@
                             <div class="product-info">
                                 <a  class="title" href="{{ url('/product-details/' . $ad->id) }}">{{ $ad->title }}</a>
                                 <p class="price">{{ $ad->price }}€</p>
-                                <p class="date">{{ $ad->created_at}}</p>                                
+                                <p class="date">{{ $ad->created_at}}</p>
                                 <p class="description">{{ $ad->description }}</p>
-                                <a href="#"><img class="icon" src="/icons/icon-heart.svg" alt=""></a>   
+                                <a href="#"><img class="icon" src="/icons/icon-heart.svg" alt=""></a>
                                 <a  class="view-details" href="{{ url('/product-details/' . $ad->id) }}">View details</a>
                             </div>
-                         @endforeach   
-                     @endif   
+                         @endforeach
+                     @endif
                  @endif
              </ul>
         </div>

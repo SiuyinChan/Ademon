@@ -1,19 +1,17 @@
 <div>
     <form class="searchbar" action="/searchresult" method="POST">
-        @csrf        
-        <select require="true" name="searchCity" require="true">
+        @csrf
+        <select required name="searchCity">
             <option value="" disabled selected>All locations</option>
-            <option value="Aix-en-Provence">Aix-en-Provence</option>
-            <option value="Bordeaux">Bordeaux</option>
-            <option value="Canne">Canne</option>
-            <option value="Dijon">Dijon</option>
-            <option value="Lille">Lille</option>
-            <option value="Lyon">Lyon</option>
-            <option value="Montpellier">Montpellier</option>
-            <option value="Paris">Paris</option>
-            <option value="Strasbourg">Strasbourg</option>
+            @if(isset($cities))
+                @if(count($cities)>0)
+                    @foreach($cities as $city)
+                        <option value="{{ $city->city_name }}">{{ $city->city_name }}</option>
+                    @endforeach
+                @endif
+            @endif
         </select>
         <button type="submit"><img src="/icons/icon-search.svg" alt=""></button>
-        <input type="text" name="searchProduct" placeholder="Search goods & services" require="true">
-    </form>   
+        <input type="text" name="searchProduct" placeholder="Search goods & services" required>
+    </form>
 </div>

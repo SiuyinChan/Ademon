@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Ads;
@@ -56,7 +55,7 @@ class UsersController extends Controller
     }
 
     public function showAds()
-    {       
+    {
         $user = Auth::user();
         $id = Auth::id();
         $ads = Ads::where('user_id', $id)
@@ -76,7 +75,7 @@ class UsersController extends Controller
                 ->first();
         $categories = Categories::all();
         $cities = Cities::all();
-               
+
         return view('users.userAdDetails', ['ad' => $ad, 'categories' => $categories, 'cities' => $cities,]);
     }
 
@@ -114,7 +113,6 @@ class UsersController extends Controller
             'productDescription' => 'required',
             'productCategory' => 'required',
             'productCondition' => 'required',
-            'productCondition' => 'required',
             'productLocation' => 'required',
             //'productPic.*' => 'required|image'
          ]);
@@ -131,7 +129,7 @@ class UsersController extends Controller
                         'price' => $request->input('productPrice'),
                         //'image' = json_encode($pics);
                         'condition' => $request->input('productCondition'),
-                        'city' => $request->input('productLocation')        
+                        'city' => $request->input('productLocation')
                     ]);
 
         return view('users.userAds', ['user' => $user, 'ads' => $ads]);

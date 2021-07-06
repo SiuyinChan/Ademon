@@ -40,8 +40,8 @@
                 <select name="productCondition">
                         <option value="" disabled selected>Select condition</option>
                         <option value="verygood">Very good</option>
-                        <option value="good">good</option>
-                        <option value="average">average</option>
+                        <option value="good">Good</option>
+                        <option value="average">Average</option>
                 </select>
 
                 <label for="productLocation">Location</label>

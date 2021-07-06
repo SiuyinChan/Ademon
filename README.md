@@ -1,53 +1,65 @@
-## About Laravel
+# Ademon
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Overview
+Ademon is a classified ad application that allows users to explore a wide range of ads. It provides a platform for buyers and sellers to connect and engage with classifieds in various categories.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Quick Look
+| ![Home Page](./screenshots/homePage.png?raw=true) | 
+|:-------------------------------------------------:| 
+|                    *Home Page*                    |
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+| ![Account Page](./screenshots/accountPage.png?raw=true) | 
+|:-------------------------------------------------------:| 
+|                     *Account Page*                      |
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Features
+- Browse through a diverse collection of ads.
+- Filter ads by category and location.
+- View detailed information about each ad, including description, price, location, and contact information.
+- Secure user registration and authentication.
+- Manage posted ads through user accounts.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Technologies Used
+- Laravel
+- HTML / Sass
+- MySQL
 
-## Laravel Sponsors
+## Installation
+1. Install dependencies:
+```
+composer install
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+2. Create a `.env` file:
+```
+cp .env.example .env
+```
 
-### Premium Partners
+3. Generate an application key:
+```
+php artisan key:generate
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+4. Add your app key and configure your database settings in the `.env` file:
+```
+APP_KEY=your_app_key
+DB_CONNECTION=mysql
+DB_HOST=your_db_host
+DB_PORT=your_db_port
+DB_DATABASE=your_db_name
+DB_USERNAME=your_db_username
+DB_PASSWORD=your_db_password
+```
 
-## Contributing
+5. Run migrations and seed the database:
+```
+php artisan migrate --seed
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Start the development server:
+```
+php artisan serve
+```
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7. Visit http://localhost:8000 in your browser to access Ademon.
